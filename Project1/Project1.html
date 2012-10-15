@@ -1,0 +1,231 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bendeck, Phillippe | Project 1</title> 
+  
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.css" />
+ <link rel= "stylesheet" href="css/styles.css" />
+      
+       
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+
+    
+ <script type="text/javascript">
+     $('div.ui-page').live("swipeleft", function(){
+    var nextpage = $(this).next('div[data-role="page"]');
+    // swipe using id of next page if exists
+    if (nextpage.length > 0) {
+    $.mobile.changePage(nextpage, 'slide');
+    }
+    });
+    $('div.ui-page').live("swiperight", function(){
+    var prevpage = $(this).prev('div[data-role="page"]');
+    // swipe using id of next page if exists
+    if (prevpage.length > 0) {
+    $.mobile.changePage(prevpage, {transition:"slide", reverse:true});
+    }
+    });
+ </script>
+ 
+ <script type="text/javascript"> 
+$( function() {
+  $('body').bind( 'taphold', function( e ) {
+    alert( 'You tapped and held!' );
+    e.stopImmediatePropagation();
+    return false;
+  } ); 
+} );
+
+$( function () {
+  $("#verify").click( function()
+    {
+       alert('button clicked');
+     });
+});
+    </script>
+    
+</head> <body> 
+
+<!-- Start of first page -->
+<div data-role="page" id="page1" data-url="home" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 667px; ">
+
+  <div data-role="header" class="ui-header ui-bar-a" role="banner">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Comic Strip Home</h1>
+  </div><!-- /header -->
+
+  <div data-role="content" class="ui-content" role="main">  
+    <h2>Welcome. Click on any comic strip from the following list below.</h2>
+        <p><a href="project1.html#comic1-1" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Garfield Comic Strip</span></span></a>     
+        <p><a href="project1.html#comic2-1" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Peanuts Comic Strip</span></span></a>
+        <p><a href="project1.html#comic2-1" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Peanuts Comic Strip</span></span></a>        
+  </div><!-- /content -->
+
+  <div data-role="footer">
+    <h4>Phillippe Bendeck &#169 2012 University of Central Florida, Digital Media, School of Visual Art and Design</h4>
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Page 2 -->
+<div data-role="page" id="page2" data-url="comic1-1">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Garfield Comic Strip 1</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/garfield1.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#home" data-role="button" data-icon="back" data-iconpos="bottom">Back</a></li>
+        <li><a href="project1.html#comic1-2" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of Comics 1, second page -->
+<div data-role="page" id="page2" data-url="comic1-2">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Garfied Comic Strip 1</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/garfield2.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#comic1-1" data-role="button" data-icon="back" data-iconpos="bottom">Back</a></li>
+        <li><a href="project1.html#comic1-3" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<!-- Start of Comics 1, third page -->
+<div data-role="page" id="page2" data-url="comic1-3">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Garfield Comic Strip 1</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/garfield3.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#comic1-2" data-role="button" data-icon="back" data-iconpos="bottom">Back</a></li>
+        <li><a href="#" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+
+<!-- Start of Comics 2, first page -->
+<div data-role="page" id="page3" data-url="comic2-1">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Peanuts Comic Strip 2</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/peanuts1.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#home" data-role="button" data-icon="back" data-iconpos="bottom" data-rel="back">Back</a></li>
+        <li><a href="project1.html#comic2-2" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<!-- Start of Comics 2, second page -->
+<div data-role="page" id="page3" data-url="comic2-2">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Peanut Comic Strip 2</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/peanuts2.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#comic2-2" data-role="button" data-icon="back" data-iconpos="bottom" data-rel="back">Back</a></li>
+        <li><a href="project1.html#comic2-3" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<!-- Start of Comics 2, third page -->
+<div data-role="page" id="page3" data-url="comic2-3">
+
+  <div data-role="header">
+    <a href="project1.html#home" data-icon="home">Home</a>
+    <h1>Peanuts Comic Strip 2</h1>
+  </div><!-- /header -->
+
+  <div data-role="content"> 
+    <div align="center">
+      <img src="./images/peanuts3.png" />
+    </div>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="project1.html#comic2-2" data-role="button" data-icon="back" data-iconpos="bottom" data-rel="back">Back</a></li>
+        <li><a href="#" data-role="button" data-icon="forward" data-iconpos="bottom">Forward</a></li>
+      </ul>
+    </div><!-- /navbar -->
+  </div><!-- /footer -->
+</div><!-- /page -->
+  
+    
+</body>
+</html>
